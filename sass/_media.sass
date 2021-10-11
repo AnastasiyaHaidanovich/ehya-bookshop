@@ -1,0 +1,35 @@
+@media (max-width:1200px)
+    .container 
+        max-width: 980px
+    .header 
+        padding: 25px 0 20px 0
+@media (max-width:991px)
+    .container 
+        max-width: 760px
+    .header 
+        &__wrapper 
+            flex-basis: 50%
+@media (max-width:760px)
+    body
+        padding-top: 64px
+    .container 
+        max-width: 560px
+    .header 
+        padding: 20px 0 20px 0
+        &__logo 
+            max-width: 77px
+        &__mobile-fixed 
+            position: fixed
+            top: 0
+            left: 0
+            right: 0
+            z-index: 99
+        &__button,
+        &__wrapper 
+            display: none
+@media (max-width:560px)
+    .container 
+        max-width: 320px
+@media (max-width:320px)
+    .container 
+        max-width: 280px
