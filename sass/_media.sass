@@ -7,7 +7,7 @@
     .container 
         max-width: 760px
     .header 
-        &__wrapper 
+        &-wrapper 
             flex-basis: 50%
 @media (max-width:760px)
     body
@@ -16,17 +16,64 @@
         max-width: 560px
     .header 
         padding: 20px 0 20px 0
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 99
         &__logo 
             max-width: 77px
-        &__mobile-fixed 
-            position: fixed
-            top: 0
-            left: 0
-            right: 0
-            z-index: 99
         &__button,
-        &__wrapper 
+        &-wrapper 
             display: none
+        &__menu 
+            &-button 
+                display: none
+                width: 24px
+                height: 24px
+                display: flex 
+                flex-direction: column
+                align-items: center
+                justify-content: space-around
+                background-color: transparent
+                border: none
+        &-mobile 
+            position: fixed
+            top: 64px 
+            right: 0
+            bottom: 0
+            left: 0
+            overflow: auto
+            background-color: $primary
+            &__container 
+                display: flex
+                flex-direction: column
+                align-items: center
+                padding: 40px 0
+            &__item 
+                text-align: center
+                list-style: none
+                margin-bottom: 30px
+            &__link 
+                color: $light
+                text-decoration: none
+            &__button 
+                color: $light 
+                border: 2px solid $light
+                font-style: normal
+                font-weight: bold
+                font-size: 16px
+                line-height: 22px
+                padding: 12px 30px
+                background-color: $secondary
+                border-radius: 8px
+    .menu 
+        &-button
+            &__line
+                display: block
+                width: 22px
+                height: 2px
+                background-color: #3A4C66
 @media (max-width:560px)
     .container 
         max-width: 320px

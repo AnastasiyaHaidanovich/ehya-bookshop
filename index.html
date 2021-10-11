@@ -12,32 +12,55 @@
     font-family: 'Roboto Condensed', sans-serif; -->
     <title>Ehya - online bookstore</title>
 </head>
-<body>
-    <header class="header header__mobile-fixed">
-        <div class="container header__container">
-            <a href="index.html" class="header__link">
-                <img src="img/logo.svg" alt="Ehya logo" class="header__logo">
-            </a>
-            <nav class="header__wrapper">
-                <ul class="header-nav">
-                    <li class="header-nav__item">
-                        <a href="#recommend" class="header-nav__link">Рекомендации</a>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#books" class="header-nav__link">Книги</a>
-                    </li>
-                    <li class="header-nav__item">
-                        <a href="#blog" class="header-nav__link">Блог</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="button header__button">Получить</button>
-        </div>
-        <!-- /.container -->
+<body class="body">
+    <header class="header">
+            <div class="container header__container">
+                <a href="index.html" class="header__link">
+                    <img src="img/logo.svg" alt="Ehya logo" class="header__logo">
+                </a>
+                <nav class="header-wrapper">
+                    <ul class="header-nav">
+                        <li class="header-nav__item">
+                            <a href="#recommend" class="header-nav__link">Рекомендации</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#books" class="header-nav__link">Книги</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#blog" class="header-nav__link">Блог</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="button header__button">Получить</button>
+                <button class="menu-button header__menu-button">
+                    <span class="menu-button__line"></span>
+                    <span class="menu-button__line"></span>
+                    <span class="menu-button__line"></span>
+                </button>
+                <div class="header-mobile">
+                    <div class="container header-mobile__container">
+                        <ul class="header-mobile__nav">
+                            <li class="header-mobile__item">
+                                <a href="#recommend" class="header-mobile__link">Рекомендации</a>
+                            </li>
+                            <li class="header-mobile__item">
+                                <a href="#books" class="header-mobile__link">Книги</a>
+                            </li>
+                            <li class="header-mobile__item">
+                                <a href="#blog" class="header-mobile__link">Блог</a>
+                            </li>
+                        </ul>
+                        <button class="button header-mobile__button">Получить</button>
+                    </div>
+                </div>
+                <!-- .header-mobile -->
+            </div>
+            <!-- /.container -->
     </header>
     <main>
-        <img src="img/video-poster-1.png" alt="">
+        
     </main>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

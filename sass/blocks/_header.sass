@@ -1,11 +1,15 @@
 .header 
     padding: 37px 0 26px 0
     background-color: #ffffff
+    &-mobile 
+        display: none
+        &__visible 
+            display: block
     &__container 
         display: flex
         align-items: center
         justify-content: space-between
-    &__wrapper 
+    &-wrapper 
         flex-basis: 68%
     &-nav 
         display: flex
@@ -32,4 +36,6 @@
         background-color: transparent
         border: 2px solid $blue
         border-radius: 8px
-
+    &__menu 
+        &-button 
+            display: none
