@@ -6,6 +6,43 @@
     .book 
         &-about 
             max-width: 50%
+    .recommend 
+        &__image 
+            max-width: 140px
+            height: auto
+        &-list 
+            &__item 
+                flex-basis: 48%
+        &-description 
+            padding-top: 10px
+            &__title 
+                font-size: 20px
+                line-height: 30px
+                height: 60px
+                overflow: hidden
+            &__theme 
+                margin-bottom: 15px
+            &__price 
+                margin-bottom: 20px
+            &__heart, &__heart-1, &__heart-2, &__heart-3, &__heart-4, &__heart-5
+                right: 15px
+    .top 
+        &__image 
+            max-width: 100px
+            height: auto
+        &__item:last-child
+            margin-bottom: 50px
+        &-description 
+            padding-top: 0
+            &__title 
+                font-size: 20px
+                line-height: 26px
+                height: 52px
+                overflow: hidden
+                margin-bottom: 5px
+            &__price 
+                margin-bottom: 20px
+                
 @media (max-width:991px)
     .container 
         max-width: 760px
@@ -35,6 +72,19 @@
                 font-size: 14px
                 line-height: 18px
                 padding: 13px 25px
+    .recommend 
+        flex-basis: 49%
+        &-description 
+            &__heart, &__heart-1, &__heart-2, &__heart-3, &__heart-4, &__heart-5
+                right: 25px
+        &-list 
+            &__item
+                max-width: 100%
+                flex-basis: 100%
+                &:nth-child(even)
+                    display: none
+    .top 
+        flex-basis: 49%
 @media (max-width:760px)
     body
         padding-top: 64px
@@ -120,7 +170,38 @@
         &-cover 
             width: 100%
             padding: 70px 20%
-                
+    .recommend 
+        flex-basis: 55%
+        &__title 
+            font-size: 28px
+            line-height: 36px
+        &-description 
+            &__title 
+                font-size: 20px
+                line-height: 24px
+        &-description 
+            &__heart, &__heart-1, &__heart-2, &__heart-3, &__heart-4, &__heart-5
+                right: 10px
+        &-list 
+            &__item
+                max-width: 100%
+                flex-basis: 100%
+    .top 
+        flex-basis: 42% 
+        &__image 
+            max-width: 95px
+        &__title 
+            font-size: 28px
+            line-height: 36px
+        &-description 
+            flex-basis: 58%
+            &__title 
+                font-size: 16px
+                line-height: 24px
+        &__item 
+            padding: 26px 12px
+            &:last-child
+                margin-bottom: 34px
 @media (max-width:560px)
     .container 
         max-width: 320px
@@ -155,6 +236,80 @@
                 flex-direction: column
                 align-items: center
                 margin-bottom: 36px
+    .store 
+        &__container 
+            flex-direction: column
+    .recommend
+        flex-basis: 100%
+        margin-bottom: 56px
+        width: 100%
+        &__title 
+            text-align: center
+            margin-bottom: 72px
+        &__image 
+            margin: 0 auto
+            margin-top: -35px
+            margin-bottom: 18px
+        &-list 
+            &__item
+                display: none
+                padding-bottom: 32px
+                margin-bottom: 22px
+                &:first-child
+                    display: flex
+                    flex-direction: column
+        &-description 
+            text-align: center
+            flex-basis: 100%
+            width: 100%
+            &__title 
+                font-size: 20px
+                line-height: 24px
+                margin-bottom: 12px
+                height: auto
+            &__theme 
+                font-size: 14px
+                line-height: 20px
+                margin-bottom: 16px
+            &__price 
+                font-size: 16px
+                line-height: 20px
+            &__heart, &__heart-1, &__heart-2, &__heart-3, &__heart-4, &__heart-5
+                right: 63px
+                bottom: 38px
+            &__button 
+                margin-left: -40px
+                padding: 7px 26px
+                
+        &__link 
+            padding: 14px 61px
+            text-transform: none
+    .top 
+        &__title 
+            text-align: center
+            margin-bottom: 36px
 @media (max-width:320px)
     .container 
         max-width: 280px
+    .recommend 
+        &__image 
+            max-width: 95px
+            margin-bottom: 8px
+    .store 
+        &__container 
+            padding-bottom: 56px
+    .top 
+        &-description 
+            &__title 
+                width: 90%
+                margin-top: 3px
+        &__item
+            padding-top: 18px
+            padding-bottom: 18px
+            &:first-child
+                padding-top: 26px
+            &:last-child
+                margin-bottom: 40px
+        &__link 
+            padding-top: 20px
+            padding-bottom: 20px
