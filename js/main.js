@@ -32,8 +32,8 @@ const themeSwiper = new Swiper('.theme-swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.theme-swiper__button-next',
-    prevEl: '.theme-swiper__button-prev',
+    nextEl: '.theme__button-next',
+    prevEl: '.theme__button-prev',
   },
 
   keyboard: {
@@ -54,8 +54,8 @@ const unpublisedSwiper = new Swiper('.unpublished-swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.unpublished-swiper__button-next',
-    prevEl: '.unpublished-swiper__button-prev',
+    nextEl: '.unpublished__button-next',
+    prevEl: '.unpublished__button-prev',
   },
 
   keyboard: {
@@ -113,4 +113,58 @@ const unpublisedSwiper = new Swiper('.unpublished-swiper', {
         $('body,html').animate({scrollTop: top}, 1000);
     });
 
+    // подключаем видео с ютуба
+    var player;
+    $('.story-wide__button').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        videoId: 'WazZXwlmO6I',
+        events: {
+          'onReady': videoPlay,
+        }
+      });
+    })
+
+    var player1;
+    $('.story-video__button-first').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player1', {
+        height: '100%',
+        width: '100%',
+        videoId: 'WazZXwlmO6I',
+        events: {
+          'onReady': videoPlay,
+        }
+      });
+    })
+
+    var player2;
+    $('.story-video__button-second').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player2', {
+        height: '100%',
+        width: '100%',
+        videoId: 'WazZXwlmO6I',
+        events: {
+          'onReady': videoPlay,
+        }
+      });
+    })
+
+    var player3;
+    $('.story-video__button-third').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player3', {
+        height: '100%',
+        width: '100%',
+        videoId: 'WazZXwlmO6I',
+        events: {
+          'onReady': videoPlay,
+        }
+      });
+    })
+
+    function videoPlay() {
+      player.videoPlay();
+    }
+
+    
 })

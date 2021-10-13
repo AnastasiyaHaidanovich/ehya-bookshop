@@ -1,32 +1,9 @@
 .theme
     padding: 60px 0 100px 0
-    &__slider 
-        position: relative
     &-swiper 
         width: 100%
         height: 240px
         border-radius: 8px
-        
-        &__button
-            position: absolute
-            width: 56px
-            height: 56px            
-            border-radius: 50%
-            background-color: $light
-            box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08)
-            border: none
-            top: 50%
-            transform: translateY(-50%)
-            z-index: 100
-            cursor: pointer
-            background-repeat: no-repeat
-            background-position: center
-            &-next 
-                right: -27px
-                background-image: url(../img/arrow-right-dark.svg)
-            &-prev 
-                left: -27px
-                background-image: url(../img/arrow-left-dark.svg)
         &__slide 
             max-width: 265px
             // margin-right: 26px
@@ -35,6 +12,28 @@
             border: 1px solid #eceef2 
             border-radius: 8px
             text-align: center
+    &__slider 
+        position: relative
+    &__button
+        position: absolute
+        width: 56px
+        height: 56px            
+        border-radius: 50%
+        background-color: $light
+        box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08)
+        border: none
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 100
+        cursor: pointer
+        background-repeat: no-repeat
+        background-position: center
+        &-next 
+            right: -27px
+            background-image: url(../img/arrow-right-dark.svg)
+        &-prev 
+            left: -27px
+            background-image: url(../img/arrow-left-dark.svg) 
 .swiper
     &-slide 
         &__image 

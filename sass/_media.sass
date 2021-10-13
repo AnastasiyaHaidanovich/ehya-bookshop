@@ -47,6 +47,10 @@
             width: 900px
         &-video 
             width: 30%
+            &__poster 
+                height: 171px
+        &-wide 
+            height: 340px
 @media (max-width:991px)
     .container 
         max-width: 760px
@@ -90,8 +94,13 @@
     .top 
         flex-basis: 49%
     .story 
+        &-video 
+            &__poster 
+                height: 141px
         &-container 
             width: 760px
+        &-wide 
+            height: 290px
 @media (max-width:760px)
     body
         padding-top: 64px
@@ -223,6 +232,8 @@
             text-align: center
         &-video 
             align-items: center
+            &__poster 
+                height: 106px
             &__author 
                 font-size: 16px
                 line-height: 20px
@@ -236,6 +247,7 @@
                 background-size: 21px 27px
         &-wide 
             margin-top: 35px
+            height: 200px
             &__poster 
                 height: 210px
             &__button 
@@ -345,6 +357,12 @@
             flex-basis: 47%
             &:last-child 
                 display: none
+            &__poster 
+                height: 138px
+            &__poster img
+                height: 100%
+        &-wide 
+            height: 210px
 @media (max-width:320px)
     .container 
         max-width: 280px
