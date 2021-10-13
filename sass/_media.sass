@@ -42,7 +42,11 @@
                 margin-bottom: 5px
             &__price 
                 margin-bottom: 20px
-                
+    .story 
+        &-container 
+            width: 900px
+        &-video 
+            width: 30%
 @media (max-width:991px)
     .container 
         max-width: 760px
@@ -85,6 +89,9 @@
                     display: none
     .top 
         flex-basis: 49%
+    .story 
+        &-container 
+            width: 760px
 @media (max-width:760px)
     body
         padding-top: 64px
@@ -202,6 +209,45 @@
             padding: 26px 12px
             &:last-child
                 margin-bottom: 34px
+    .story 
+        &-container 
+            width: 560px
+        &__description 
+            max-width: 100%
+            flex-basis: 100% 
+            text-align: center
+            line-height: 25px
+        &__title 
+            margin-bottom: 24px
+            flex-basis: 100% 
+            text-align: center
+        &-video 
+            align-items: center
+            &__author 
+                font-size: 16px
+                line-height: 20px
+            &__description 
+                font-size: 12px
+                line-height: 20px
+                margin-bottom: 16px
+            &__favorite
+                position: static
+            &__button 
+                background-size: 21px 27px
+        &-wide 
+            margin-top: 35px
+            &__poster 
+                height: 210px
+            &__button 
+                width: 56px
+                height: 56px
+                background-size: 17px 22px
+@media ( max-width:620px)
+    .container 
+        max-width: 500px
+    .story 
+        &-container 
+            width: 500px    
 @media (max-width:560px)
     .container 
         max-width: 320px
@@ -288,6 +334,17 @@
         &__title 
             text-align: center
             margin-bottom: 36px
+    .story 
+        padding: 44px 0 43px 0
+        &-container 
+            width: 320px
+        &__title 
+            font-size: 28px
+            line-height: 36px
+        &-video 
+            flex-basis: 47%
+            &:last-child 
+                display: none
 @media (max-width:320px)
     .container 
         max-width: 280px
@@ -313,3 +370,15 @@
         &__link 
             padding-top: 20px
             padding-bottom: 20px
+    .story 
+        &-container 
+            width: 300px
+        &-wide 
+            margin-bottom: 20px
+        &-video 
+            &__poster 
+                height: 138px
+            &__poster img 
+                height: 100%
+            &__author 
+                letter-spacing: normal
