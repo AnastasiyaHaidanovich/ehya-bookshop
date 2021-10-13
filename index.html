@@ -215,8 +215,8 @@
             <div class="container">
                 <h2 class="visually-hidden">Каталоги книг по темам</h2>
                 <!-- Slider main container -->
-                <div class="slider">
-                    <div class="theme-swiper">
+                <div class="slider theme__slider">
+                    <div class="swiper theme-swiper">
                     <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -262,10 +262,11 @@
                             </div>
                         </div>
                         <!-- If we need navigation buttons -->
-                        <div class="theme-swiper__button theme-swiper__button-prev"></div>
-                        <div class="theme-swiper__button theme-swiper__button-next"></div>
+                        
 
                     </div>
+                    <div class="theme-swiper__button theme-swiper__button-prev"></div>
+                        <div class="theme-swiper__button theme-swiper__button-next"></div>
                 </div>
                 <!-- /.slider -->
             </div>
@@ -277,7 +278,7 @@
                 <h2 class="unpublished__title">Неизданные книги</h2>
                 <div class="unpublished-slider">
                     <!-- Slider main container -->
-                    <div class="unpublished-swiper">
+                    <div class="swiper unpublished-swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -318,11 +319,60 @@
                             </div>
                         </div>
                         <!-- If we need navigation buttons -->
-                        <div class="unpublished-swiper__button unpublished-swiper__button-prev"></div>
-                        <div class="unpublished-swiper__button unpublished-swiper__button-next"></div>
+                        
                     </div>
+                    <div class="unpublished-swiper__button unpublished-swiper__button-prev"></div>
+                        <div class="unpublished-swiper__button unpublished-swiper__button-next"></div>
                 </div>
                 <!-- /.unpublished-slider -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <section class="story">
+            <div class="story-container">
+                <h2 class="story__title">История Автора</h2>
+                <p class="story__description">
+                    Это раздел авторского рассказа. Каждую неделю мы стараемся рассказать вам историю писателя. Расскажем всем 
+                    о закулисье их книг.
+                </p>
+                <div class="story-wide">
+                    <img src="img/video-poster-1.png" width="1005" alt="Poster to video" class="story-wide__poster">
+                    <span class="story-wide__button"></span>
+                </div>
+                <!-- /.story__video -->
+                <div class="story-video">
+                    <div class="story-video__poster">
+                        <img src="img/video-poster-2.png" width="315" alt="Poster to video">
+                        <span class="story-video__button"></span>
+                    </div>
+                    <h3 class="story-video__author">Emelda Scandroot</h3>
+                    <span class="story-video__description">Author of Books Tittle</span>
+                    <svg width="14" height="19" class="story-video__favorite" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0625 0.25H1.9375C0.988281 0.25 0.25 1.02344 0.25 1.9375V18.25L7 14.3125L13.75 18.25V1.9375C13.75 1.02344 12.9766 0.25 12.0625 0.25ZM12.0625 15.332L7 12.3789L1.9375 15.332V2.14844C1.9375 2.04297 2.00781 1.9375 2.14844 1.9375H11.8516C11.957 1.9375 12.0625 2.04297 12.0625 2.14844V15.332Z" fill="#1565D8"/>
+                    </svg>
+                </div>
+                <div class="story-video">
+                    <div class="story-video__poster">
+                        <img src="img/video-poster-3.png" width="315" alt="Poster to video">
+                        <span class="story-video__button"></span>
+                    </div>
+                    <h3 class="story-video__author">Mar Rueda</h3>
+                    <span class="story-video__description">Author of Books Tittle</span>
+                    <svg width="14" height="19" class="story-video__favorite" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0625 0.25H1.9375C0.988281 0.25 0.25 1.02344 0.25 1.9375V18.25L7 14.3125L13.75 18.25V1.9375C13.75 1.02344 12.9766 0.25 12.0625 0.25ZM12.0625 15.332L7 12.3789L1.9375 15.332V2.14844C1.9375 2.04297 2.00781 1.9375 2.14844 1.9375H11.8516C11.957 1.9375 12.0625 2.04297 12.0625 2.14844V15.332Z" fill="#1565D8"/>
+                    </svg>
+                </div>
+                <div class="story-video">
+                    <div class="story-video__poster">
+                        <img src="img/video-poster-4.png" width="315" alt="Poster to video">
+                        <span class="story-video__button"></span>
+                    </div>
+                    <h3 class="story-video__author">Nembo Lukeni</h3>
+                    <span class="story-video__description">Author of Books Tittle</span>
+                    <svg width="14" height="19" class="story-video__favorite" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0625 0.25H1.9375C0.988281 0.25 0.25 1.02344 0.25 1.9375V18.25L7 14.3125L13.75 18.25V1.9375C13.75 1.02344 12.9766 0.25 12.0625 0.25ZM12.0625 15.332L7 12.3789L1.9375 15.332V2.14844C1.9375 2.04297 2.00781 1.9375 2.14844 1.9375H11.8516C11.957 1.9375 12.0625 2.04297 12.0625 2.14844V15.332Z" fill="#1565D8"/>
+                    </svg>
+                </div>
             </div>
             <!-- /.container -->
         </section>

@@ -1,0 +1,80 @@
+.story 
+    padding: 104px 0 100px 0
+    &-container 
+        max-width: 1005px
+        margin: auto
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        justify-content: space-between
+    &__title 
+        font-family: Roboto Condensed
+        font-style: normal
+        font-weight: bold
+        font-size: 48px
+        line-height: 60px
+        letter-spacing: 0.2px
+        color: $primary
+    &__description 
+        max-width: 382px
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 32px
+        color: $secondary
+    &-wide 
+        width: 100%
+        margin: 30px 0
+        position: relative
+        &__button 
+            width: 100px
+            height: 100px
+            position: absolute
+            z-index: 99
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: $light
+            border-radius: 50%
+            background-image: url(../img/play-blue.svg)
+            background-repeat: no-repeat
+            background-position: center
+    &-video 
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+        &__author 
+            font-family: Roboto, sans-serif
+            font-style: normal
+            font-weight: 500
+            font-size: 22px
+            line-height: 32px
+            letter-spacing: 0.2px
+            color: $primary
+            margin: 22px 0 10px 0
+        &__description 
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 22px
+            color: $secondary
+        &__favorite 
+            position: absolute
+            bottom: 36px
+            right: 0
+        &__poster 
+            position: relative
+        &__button 
+            width: 30px
+            height: 40px
+            position: absolute
+            z-index: 99
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: transparent
+            background-image: url(../img/play-white.svg)
+            background-repeat: no-repeat
+            background-position: center
+
