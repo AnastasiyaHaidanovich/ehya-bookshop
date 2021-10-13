@@ -46,5 +46,49 @@ $(document).ready(function () {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
+// подключаем свайпер 
+    const themeSwiper = new Swiper('.theme-swiper', {
+      // Optional parameters
+      speed: 900,
+      touchEventsTarget: true,
+      slidesOffsetAfter: 0,
+      slidesPerGroup: 2,
+      watchOverflow: false,
+      // Default parameters
+      slidesPerView: 4,
+      spaceBetween: 26,
+      // enabled: false,
+      // Responsive breakpoints
+      // breakpoints: {
+      //   // when window width is >= 320px
+      //   320: {
+      //     slidesPerView: 2/2,
+      //     spaceBetween: 20
+      //   },
+      //   // when window width is >= 480px
+      //   480: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 30
+      //   },
+      //   // when window width is >= 640px
+      //   640: {
+      //     slidesPerView: 4,
+      //     spaceBetween: 40
+      //   }
+      // },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.theme-swiper__button-next',
+        prevEl: '.theme-swiper__button-prev',
+      },
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      }, 
+
+      
+    });
 
 })
