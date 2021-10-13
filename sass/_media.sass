@@ -195,6 +195,7 @@
             &__title 
                 font-size: 20px
                 line-height: 24px
+                height: 48px
         &-description 
             &__heart, &__heart-1, &__heart-2, &__heart-3, &__heart-4, &__heart-5
                 right: 10px
@@ -210,7 +211,7 @@
             font-size: 28px
             line-height: 36px
         &-description 
-            flex-basis: 58%
+            flex-basis: 50%
             &__title 
                 font-size: 16px
                 line-height: 24px
@@ -268,43 +269,6 @@
 @media ( max-width:620px)
     .container 
         max-width: 500px
-    .story 
-        &-container 
-            width: 500px    
-@media (max-width:560px)
-    .container 
-        max-width: 320px
-    .book 
-        padding: 36px 0 56px 0
-        &-cover 
-            padding: 59px 70px
-        &-about 
-            &__title 
-                font-size: 32px
-                line-height: 40px
-                margin-bottom: 24px
-            &__author 
-                font-size: 16px
-                line-height: 24px
-            &__description 
-                margin: 32px 0 17px 0
-                font-size: 16px
-                line-height: 23px
-            &__button 
-                font-size: 16px
-                line-height: 18px
-                margin: 0
-                padding: 9px 20px
-                margin-bottom: 15px
-            &__demo
-                font-size: 16px
-                line-height: 18px
-                padding: 9px 29px
-            &__btn-wrapper 
-                display: flex
-                flex-direction: column
-                align-items: center
-                margin-bottom: 36px
     .store 
         &__container 
             flex-direction: column
@@ -348,8 +312,7 @@
                 bottom: 38px
             &__button 
                 margin-left: -40px
-                padding: 7px 26px
-                
+                padding: 7px 26px    
         &__link 
             padding: 14px 61px
             text-transform: none
@@ -357,8 +320,51 @@
         &__title 
             text-align: center
             margin-bottom: 36px
+        &__wrapper 
+            width: 60%
+            margin: auto
     .story 
-        padding: 44px 0 43px 0
+        &-container 
+            width: 500px    
+@media (max-width:560px)
+    .container 
+        max-width: 320px
+    .book 
+        padding: 36px 0 56px 0
+        &-cover 
+            padding: 59px 70px
+        &-about 
+            &__title 
+                font-size: 32px
+                line-height: 40px
+                margin-bottom: 24px
+            &__author 
+                font-size: 16px
+                line-height: 24px
+            &__description 
+                margin: 32px 0 17px 0
+                font-size: 16px
+                line-height: 23px
+            &__button 
+                font-size: 16px
+                line-height: 18px
+                margin: 0
+                padding: 9px 20px
+                margin-bottom: 15px
+            &__demo
+                font-size: 16px
+                line-height: 18px
+                padding: 9px 29px
+            &__btn-wrapper 
+                display: flex
+                flex-direction: column
+                align-items: center
+                margin-bottom: 36px
+    .top 
+        &__wrapper 
+            width: 100%
+    .story 
+        padding: 44px 0 38px 0
         &-container 
             width: 320px
         &__title 
@@ -379,11 +385,14 @@
         &__title 
             line-height: 30px
             margin-bottom: 29px
+        &__list 
+            width: 90%
+            margin: auto
         &__item 
             flex-basis: 50%
             margin-bottom: 23px
         &__image 
-            width: 60%
+            width: 65%
 @media (max-width:320px)
     .container 
         max-width: 280px
@@ -391,19 +400,25 @@
         &__image 
             max-width: 95px
             margin-bottom: 8px
+            height: 137px
     .store 
         &__container 
             padding-bottom: 56px
     .top 
         &-description 
+            flex-basis: 58% 
             &__title 
-                width: 90%
-                margin-top: 3px
+                width: 75%
+                margin-top: 4px
+                margin-bottom: 6px
+                letter-spacing: -0.6px
+            &__price 
+                margin-bottom: 17px
         &__item
-            padding-top: 18px
-            padding-bottom: 18px
+            padding-top: 20px
+            padding-bottom: 17px
             &:first-child
-                padding-top: 26px
+                padding-top: 28px
             &:last-child
                 margin-bottom: 40px
         &__link 
