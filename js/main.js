@@ -91,4 +91,24 @@ $(document).ready(function () {
       
     });
 
+    const unpublisedSwiper = new Swiper('.unpublished-swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      touchEventsTarget: true,
+      slidesOffsetAfter: 0,
+      watchOverflow: false,
+      slidesPerView: 5,
+      spaceBetween: 30,
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.unpublished-swiper__button-next',
+        prevEl: '.unpublished-swiper__button-prev',
+      },
+    
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      }, 
+    });
 })
