@@ -178,6 +178,21 @@
                 margin-bottom: 12px
             &__link 
                 font-size: 14px
+    .mail 
+        &__wrapper 
+            display: flex
+            align-items: center
+            justify-content: space-around
+            background-size: 70%
+        &__tagline 
+            flex-basis: 40%
+            margin: 0
+            font-size: 28px
+            line-height: 32px
+        &__form 
+            margin: 0
+        &__input 
+            width: 350px
 @media (max-width:760px)
     body
         padding-top: 64px
@@ -365,6 +380,13 @@
         &-article 
             &__description 
                 flex-basis: 80%
+    .mail 
+        &__wrapper 
+            flex-direction: column
+            justify-content: space-evenly
+            background-size: 60%
+        &__tagline 
+            text-align: center 
 @media ( max-width:620px)
     .container 
         max-width: 500px
@@ -543,6 +565,48 @@
                 border-radius: 8px
         &__link 
             order: 3
+    .mail 
+        padding-top: 1px
+        width: 100%
+        background-color: $blue
+        min-height: 306px
+        &__cover
+            height: 306px
+            z-index: 50
+            background: url('../img/oval.png') 100% 100% no-repeat, url('../img/oval-1.png') 0% 0% no-repeat
+            background-size: 60%
+        &__container 
+            background-color: transparent
+        &__wrapper 
+            background: none
+            border-radius: 0
+            background-color: transparent
+            justify-content: space-between
+            align-items: start
+        &__tagline 
+            margin-top: 25px
+            margin-bottom: 32px
+            width: 65%
+            font-size: 28px
+            line-height: 36px
+            text-align: left
+            &::first-line
+                display: inline-block
+                padding-right: 70px
+        &__form 
+            min-height: 112px
+            background-color: $light
+            border-radius: 8px
+        &__input 
+            width: 272px
+            padding-right: 10px
+        &__button
+            line-height: 16px
+            width: 250px
+            top: 58px
+            bottom: 12px
+            left: 11px
+            right: 11px
 @media (max-width:320px)
     .container 
         max-width: 280px
@@ -623,3 +687,6 @@
             &__link 
                 font-size: 10px
                 line-height: 12px
+    .mail 
+        &__tagline 
+            width: 75%
