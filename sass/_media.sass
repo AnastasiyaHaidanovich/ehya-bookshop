@@ -79,6 +79,23 @@
             &__slide
                 width: 24%
                 height: 260px
+    .blog 
+        &-about 
+            flex-basis: 49%
+            &__description 
+                font-size: 16px
+                line-height: 26px
+        &-list
+            flex-basis: 49%
+        &-article 
+            &:first-child
+                padding-right: 0
+            &__title 
+                font-size: 18px
+                line-height: 20px
+            &__image 
+                margin-right: 25px
+                width: 230px
 @media (max-width:991px)
     .container 
         max-width: 760px
@@ -138,6 +155,29 @@
         &-swiper 
             &__slide 
                 height: 230px
+    .blog 
+        &__title 
+            font-size: 36px
+            line-height: 40px
+        &-about 
+            &__title 
+                font-size: 20px
+                line-height: 22px
+            &__description 
+                font-size: 14px
+                line-height: 24px
+        &-article 
+            &__image 
+                width: 170px
+            &__date 
+                font-size: 12px 
+                line-height: 14px
+                margin-bottom: 10px
+            &__title 
+                font-size: 16px
+                margin-bottom: 12px
+            &__link 
+                font-size: 14px
 @media (max-width:760px)
     body
         padding-top: 64px
@@ -313,6 +353,18 @@
         &-swiper 
             &__slide 
                 height: 240px
+    .blog 
+        padding: 70px 0
+        &__wrapper 
+            flex-direction: column
+        &-about 
+            margin-bottom: 35px
+            &__image 
+                height: 250px
+                border-radius: 8px
+        &-article 
+            &__description 
+                flex-basis: 80%
 @media ( max-width:620px)
     .container 
         max-width: 500px
@@ -468,6 +520,29 @@
         &-slide 
             &__cover img
                 width: 205px
+    .blog 
+        padding: 56px 0 48px 0
+        &__link
+            padding: 10px 52px
+            margin: auto
+            margin-top: 36px
+            text-align: center
+        &__title 
+            font-size: 28px
+            width: 100%
+            text-align: center
+            line-height: 36px
+            order: 1
+        &__wrapper 
+            order: 2
+            margin-top: 48px
+        &-article 
+            &__image 
+                width: 120px
+                height: 120px
+                border-radius: 8px
+        &__link 
+            order: 3
 @media (max-width:320px)
     .container 
         max-width: 280px
@@ -515,3 +590,36 @@
                 margin-bottom: 6px
             &__favorite 
                 width: 10px
+    .blog 
+        &__link 
+            font-size: 12px
+        &-about 
+            margin-bottom: 28px
+            &__image 
+                width: 280px
+                height: 120px
+            &__title 
+                font-size: 16px
+                line-height: 18px
+                margin: 18px 0 12px 0
+            &__description 
+                margin-left: 0
+                margin-right: 0
+                font-size: 12px
+        &-article 
+            margin-bottom: 32px
+            &__image 
+                width: 90px
+                margin-right: 20px
+                height: 90px
+            &__date 
+                font-size: 10px
+                line-height: 10px
+            &__title 
+                font-size: 14px
+                line-height: 20px
+                margin-bottom: 0
+                margin-top: 0
+            &__link 
+                font-size: 10px
+                line-height: 12px
