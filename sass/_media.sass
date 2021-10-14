@@ -7,6 +7,7 @@
         &-about 
             max-width: 50%
     .recommend 
+        flex-basis: 620px
         &__image 
             max-width: 140px
             height: auto
@@ -27,6 +28,7 @@
             &__heart, &__heart-1, &__heart-2, &__heart-3, &__heart-4, &__heart-5
                 right: 15px
     .top 
+        flex-basis: 340px
         &__image 
             max-width: 100px
             height: auto
@@ -51,6 +53,32 @@
                 height: 171px
         &-wide 
             height: 340px
+    .swiper 
+        &-slide 
+            &__title 
+                font-size: 20px
+                line-height: 24px
+            &__description 
+                font-size: 14px
+            &__cover 
+                width: 100%
+                height: 100%
+                & img 
+                    height: 100%
+    .theme 
+        &-swiper 
+            width: 95%
+            margin: auto
+        &__button 
+            &-next 
+                right: -5px
+            &-prev
+                left: -5px
+    .unpublished 
+        &-swiper
+            &__slide
+                width: 24%
+                height: 260px
 @media (max-width:991px)
     .container 
         max-width: 760px
@@ -101,6 +129,15 @@
             width: 760px
         &-wide 
             height: 290px
+    .theme 
+        &-swiper 
+            height: 500px
+            &__slide
+                height: 240px
+    .unpublished 
+        &-swiper 
+            &__slide 
+                height: 230px
 @media (max-width:760px)
     body
         padding-top: 64px
@@ -266,6 +303,16 @@
             flex-basis: 30%
             text-align: center
             margin-bottom: 40px
+        &__item-netflix
+            margin-left: 0
+        &__item-airbnb
+            margin-right: 0
+        &__item-slack 
+            margin-left: 0
+    .unpublished 
+        &-swiper 
+            &__slide 
+                height: 240px
 @media ( max-width:620px)
     .container 
         max-width: 500px
@@ -390,9 +437,37 @@
             margin: auto
         &__item 
             flex-basis: 50%
-            margin-bottom: 23px
+            margin-bottom: 20px
         &__image 
-            width: 65%
+            width: 69%
+        &__item:first-child img
+            width: 80%
+    .unpublished 
+        padding: 48px 0 135px 0
+        &__title 
+            text-align: center
+            font-size: 28px
+            line-height: 36px
+            margin-bottom: 41px
+        &-swiper 
+            width: 205px
+            &__slide 
+                width: 205px
+                height: 300px
+        &__button 
+            top: auto
+            width: 48px
+            height: 48px
+            bottom: -88px
+            right: 50%
+            &-next 
+                transform: translateX(55px)
+            &-prev
+                transform: translateX(-10px) rotate(180deg)
+    .swiper 
+        &-slide 
+            &__cover img
+                width: 205px
 @media (max-width:320px)
     .container 
         max-width: 280px
