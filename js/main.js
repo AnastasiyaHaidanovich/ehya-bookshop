@@ -50,19 +50,26 @@ const themeSwiper = new Swiper('.theme-swiper', {
   fill: 'row',
 
   grid: {
-    rows: 2,
+    rows: 1,
   },
   
   breakpoints: {
     // when window width is >= 320px
       320: {
-        rows: 2,  
+        grid: {
+          rows: 2,
+        },
+        // rows: 2,  
         slidesPerRow: 2,
         slidesPerView: 2,
       },
       991: {
-        rows: 1,
+        grid: {
+          rows: 1,
+        },
+        // rows: 1,
         slidesPerRow: 4,
+        
       }
     },
 
@@ -220,6 +227,43 @@ const themeSwiper = new Swiper('.theme-swiper', {
     modalOverlay.removeClass("modal-overlay__visible");
     modalDialog.removeClass("modal-dialog__visible");
     document.querySelector(".body").classList.remove("body-scroll");
+  };
+
+  // модалка из меню 
+
+  var modalButtonMenu = $('[data-toggle=menu]');
+  var closeModalButtonMenu = $('.modal-dialog__close');
+  modalButtonMenu.on('click', openModalMenu);
+  closeModalButtonMenu.on('click', closeModalMenu);
+
+  function openModalMenu() {
+    var modalOverlay = $(".modal-overlay");
+    var modalDialog = $(".modal-dialog");
+    modalOverlay.addClass("modal-overlay__visible");
+    modalDialog.addClass("modal-dialog__visible");
+
+    document.body.onkeydown = function(e){
+      e = e || window.event;
+      var c = e.keyCode;
+      if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
+      modalDialog.removeClass("modal-dialog__visible");
+      }
+      
+      document.addEventListener("click", function (e) {
+        const wrap = e.target.classList.contains('modal-overlay__visible');
+        if(!wrap) return;
+        e.preventDefault();
+        modalOverlay.removeClass("modal-overlay__visible") && 
+      modalDialog.removeClass("modal-dialog__visible");
+    }.bind(this));
+  };
+
+  function closeModalMenu(event) {
+    event.preventDefault();
+    var modalOverlay = $(".modal-overlay");
+    var modalDialog = $(".modal-dialog");
+    modalOverlay.removeClass("modal-overlay__visible");
+    modalDialog.removeClass("modal-dialog__visible");
   };
   
     // подключение валидации  
