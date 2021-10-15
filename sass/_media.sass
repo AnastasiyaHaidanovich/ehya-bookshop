@@ -108,6 +108,9 @@
                 margin-right: 25px
                 width: 230px
 @media (max-width:991px)
+    .body 
+        &-scroll 
+            padding: 0
     .container 
         max-width: 760px
     .header 
@@ -732,14 +735,16 @@
                 padding-right: 70px
         &__form 
             min-height: 112px
+            width: 100%
             background-color: $light
             border-radius: 8px
         &__input 
-            width: 272px
+            width: 100%
             padding-right: 10px
         &__button
             line-height: 16px
-            width: 250px
+            margin: 0 auto
+            width: 280px
             top: 58px
             bottom: 12px
             left: 11px
@@ -885,6 +890,10 @@
     .mail 
         &__tagline 
             width: 75%
+        &__button
+            width: 250px
+        &__form label 
+            font-size: 12px
     .product, .service, .company, .more
         &-list 
             &__item 
