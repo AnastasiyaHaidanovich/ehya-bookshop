@@ -21,7 +21,7 @@ if (isset($_POST['button-booking'])){
     <b>Почта:</b> $email<br><br>
     <b>Сообщение:</b><br>$message
     ";
-} else if (isset($_POST['button-newsletter'])){
+} else if (isset($_POST['button-mail'])){
     $body = "
     <h2>Новое письмо</h2>
     <b>Почта:</b> $email

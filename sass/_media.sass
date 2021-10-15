@@ -193,6 +193,20 @@
             margin: 0
         &__input 
             width: 350px
+    .footer 
+        &-logo 
+            &__tagline 
+                width: 180px
+        &-more 
+            flex-basis: auto
+        &__copyright 
+            font-size: 14px
+            line-height: 18px
+    .product, .service, .company, .more
+        &-list 
+            &__link 
+                font-size: 14px
+                line-height: 18px
 @media (max-width:760px)
     body
         padding-top: 64px
@@ -387,6 +401,19 @@
             background-size: 60%
         &__tagline 
             text-align: center 
+    .footer 
+        padding: 60px 0
+        &__top
+            flex-wrap: wrap
+            margin: 0
+        &-logo 
+            flex-basis: 60%
+            &__tagline 
+                width: 80%
+        &-product, &-service, &-company, &-more
+            margin: 0
+            margin-bottom: 40px
+            flex-basis: 33%
 @media ( max-width:620px)
     .container 
         max-width: 500px
@@ -607,6 +634,29 @@
             bottom: 12px
             left: 11px
             right: 11px
+    .footer 
+        &-logo 
+            flex-basis: 100%
+            margin: 0
+            align-items: center
+            order: 10
+            &__tagline 
+                width: 100%
+                text-align: center
+                font-size: 15px
+                line-height: 28px
+        &-product, &-service, &-company, &-more
+            flex-basis: 50%
+        &__bottom 
+            display: none
+        &__heading a 
+            font-size: 16px
+            line-height: 22px
+    .product, .service, .company, .more
+        &-list 
+            &__link 
+                font-size: 14px
+                line-height: 20px
 @media (max-width:320px)
     .container 
         max-width: 280px
@@ -690,3 +740,25 @@
     .mail 
         &__tagline 
             width: 75%
+    .product, .service, .company, .more
+        &-list 
+            &__item 
+                margin-bottom: 15px
+    .footer 
+        padding: 48px 0 64px 0
+        &-logo 
+            padding-top: 4px
+            &__tagline 
+                margin: 10px 0 16px 0
+                width: 90%
+        &-product, &-company
+            flex-basis: 52%
+            margin-bottom: 25px
+        &-more, &-service
+            flex-basis: 48%
+            margin-bottom: 25px
+        &__heading 
+            margin-bottom: 20px
+        &-social 
+            &__item 
+                margin-right: 8px
