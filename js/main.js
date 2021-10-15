@@ -48,6 +48,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
   // Default parameters
   autoHeight: false,
   fill: 'row',
+  slidesPerView: 4,
 
   grid: {
     rows: 1,
