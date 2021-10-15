@@ -1,52 +1,5 @@
 $(document).ready(function () {
 // подключаем свайпер 
-const themeSwiper = new Swiper('.theme-swiper', {
-  // Optional parameters
-  speed: 900,
-  touchEventsTarget: true,
-  slidesOffsetAfter: 0,
-  watchOverflow: false,
-  // Default parameters
-  spaceBetween: 26,
-  
-  grid: {
-    rows: 1,
-  },
-  
-  breakpoints: {
-    // when window width is >= 320px
-      320: {
-        rows: 2,
-        slidesPerView: 4,
-        slidesPerRow: 2,
-        slidesPerGroup: 1,
-      },
-    // when window width is >= 560px
-      560: {
-        rows: 2,
-        slidesPerRow: 2,
-        slidesPerView: 4,
-        slidesPerGroup: 2,
-      },
-      991: {
-        rows: 1,
-        slidesPerView: 4,
-      }
-    },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.theme__button-next',
-    prevEl: '.theme__button-prev',
-  },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  }, 
-
-  
-});
 
 const unpublisedSwiper = new Swiper('.unpublished-swiper', {
   // Optional parameters
@@ -85,6 +38,47 @@ const unpublisedSwiper = new Swiper('.unpublished-swiper', {
   }, 
 });
 
+
+const themeSwiper = new Swiper('.theme-swiper', {
+  // Optional parameters
+  speed: 900,
+  touchEventsTarget: true,
+  slidesOffsetAfter: 0,
+  watchOverflow: false,
+  // Default parameters
+  autoHeight: false,
+  fill: 'row',
+
+  grid: {
+    rows: 2,
+  },
+  
+  breakpoints: {
+    // when window width is >= 320px
+      320: {
+        rows: 2,  
+        slidesPerRow: 2,
+        slidesPerView: 2,
+      },
+      991: {
+        rows: 1,
+        slidesPerRow: 4,
+      }
+    },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.theme__button-next',
+    prevEl: '.theme__button-prev',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  }, 
+
+  
+});
 
   // открытие мобильного меню
     var menuButton = document.querySelector(".menu-button")
@@ -217,7 +211,7 @@ const unpublisedSwiper = new Swiper('.unpublished-swiper', {
       modalDialog.removeClass("modal-dialog__visible") && 
       document.querySelector(".body").classList.remove("body-scroll");
     }.bind(this));
-  }
+  };
 
   function closeModal(event) {
     event.preventDefault();
@@ -226,7 +220,50 @@ const unpublisedSwiper = new Swiper('.unpublished-swiper', {
     modalOverlay.removeClass("modal-overlay__visible");
     modalDialog.removeClass("modal-dialog__visible");
     document.querySelector(".body").classList.remove("body-scroll");
-  }
+  };
   
+    // подключение валидации  
+
+  $('.form').each(function () {
     
+
+    $.validator.methods.phone = function( value, element ) {
+      return this.optional( element ) || /\+7+ \([0-9][0-9][0-9]\) +[0-9][0-9][0-9]+\-+[0-9][0-9]+\-+[0-9][0-9]+/.test( value );
+    }
+
+    $.validator.methods.email = function( value, element ) {
+      return this.optional( element ) || /[a-z+0-9]+@[a-z]+\.[a-z]+/.test( value );
+    }
+    $(this).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        phone: {
+          required: true,
+          phone: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Введите Ваше имя",
+          minlength: jQuery.validator.format("Не менее 2 символов!")
+        },
+        email: {
+          required: "Введите Вашу почту",
+          email: "Требуемый формат name@domain.com"
+        },
+        phone: {
+          required: "Введите Ваш телефон",
+          phone: "Формат номера +7 (xxx) xxx-xx-xx"
+        }
+      }
+    });
+  });
+  AOS.init();
 })

@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- <link rel="stylesheet" href="css/grid.min.css"> -->
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/grid.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -60,7 +63,7 @@
             <!-- /.container -->
     </header>
     <main>
-        <section class="book">
+        <section class="book" data-aos="fade-up" data-aos-duration="500">
             <div class="container book__container">
                 <div class="book-about">
                     <h1 class="visually-hidden">Страница книжного интернет-магазина Ehya</h1>
@@ -85,7 +88,7 @@
             <!-- /.container -->
         </section>
         <!-- /.book -->
-        <section class="store">
+        <section class="store" data-aos="fade-up" data-aos-duration="500">
             <div class="container store__container">
                 <div class="recommend" id="recommend">
                     <h2 class="recommend__title">Рекомендации</h2>
@@ -213,9 +216,67 @@
             <!-- /.container -->
         </section>
         <!-- /.store -->
-        
+        <section class="theme" data-aos="fade-up" data-aos-duration="500">
+            <div class="container">
+                <h2 class="visually-hidden">Каталоги книг по темам</h2>
+                <!-- Slider main container -->
+                <div class="slider theme__slider">
+                    <div class="swiper theme-swiper">
+                    <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/business-finance.svg" alt="Icon: business & finance" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Бизнес & Финансы</h3>
+                                <span class="swiper-slide__description">Книги про мир бизнеса</span>
+                            </div>
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/selfmotivation.svg" alt="Icon: selfmotivation" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Самомотиватия</h3>
+                                <span class="swiper-slide__description">Книги о мотивации</span>
+                            </div>
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/novels-tvnovels.svg" alt="Icon: novel" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Романы Теленовеллы</h3>
+                                <span class="swiper-slide__description">Книги с крутыми историями</span>
+                            </div>
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/skills-of-future.svg" alt="Icon: skills-of-future" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Навыки будущего</h3>
+                                <span class="swiper-slide__description">Книги для самоподготовки</span>
+                            </div>
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/business-finance.svg" alt="Icon: business & finance" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Бизнес & Финансы</h3>
+                                <span class="swiper-slide__description">Книги про мир бизнеса</span>
+                            </div>
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/selfmotivation.svg" alt="Icon: selfmotivation" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Самомотиватия</h3>
+                                <span class="swiper-slide__description">Книги о мотивации</span>
+                            </div>
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/novels-tvnovels.svg" alt="Icon: novel" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Романы Теленовеллы</h3>
+                                <span class="swiper-slide__description">Книги с крутыми историями</span>
+                            </div>
+                            <div class="swiper-slide theme-swiper__slide">
+                                <img src="img/skills-of-future.svg" alt="Icon: skills-of-future" class="swiper-slide__image">
+                                <h3 class="swiper-slide__title">Навыки будущего</h3>
+                                <span class="swiper-slide__description">Книги для самоподготовки</span>
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                    </div>
+                    <div class="theme__button theme__button-prev"></div>
+                    <div class="theme__button theme__button-next"></div>
+                </div>
+                <!-- /.slider -->
+            </div>
+            <!-- /.container -->
+        </section>
         <!-- /.theme -->
-        <section class="unpublished" id="books">
+        <section class="unpublished" id="books" data-aos="fade-up" data-aos-duration="500">
             <div class="container">
                 <h2 class="unpublished__title">Неизданные книги</h2>
                 <div class="unpublished-slider">
@@ -271,7 +332,7 @@
             <!-- /.container -->
         </section>
         
-        <section class="story">
+        <section class="story" data-aos="fade-up" data-aos-duration="500">
             <div class="story-container">
                 <h2 class="story__title">История Автора</h2>
                 <p class="story__description">
@@ -320,7 +381,7 @@
             </div>
             <!-- /.container -->
         </section>
-        <section class="cooperation">
+        <section class="cooperation" data-aos="fade-up" data-aos-duration="500">
             <div class="container">
                 <h2 class="cooperation__title">Некоторые из издателей, с&nbsp;которыми мы сотрудничали</h2>
                 <ul class="cooperation__list">
@@ -367,7 +428,7 @@
             <!-- /.container -->
         </section>
         <!-- /.cooperation -->
-        <section class="blog" id="blog">
+        <section class="blog" id="blog" data-aos="fade-up" data-aos-duration="500">
             <div class="container blog__container">
                 <h2 class="blog__title">Ehya Блог</h2>
                 <a href="#" class="blog__link">Все Блоги</a>
@@ -416,7 +477,7 @@
             <!-- /.container -->
         </section>
         <!-- /.blog -->
-        <section class="mail">
+        <section class="mail" data-aos="fade-up" data-aos-duration="500">
             <div class="mail__cover">
                 <div class="container mail__container">
                     <div class="mail__wrapper">
@@ -544,10 +605,10 @@
                 <img src="img/close.svg" width="17" height="16" alt="Icon: close">
             </a>
             <h3 class="modal-dialog__title">Оформить заказ</h3>
-            <form action="sendto.php" method="POST" class="form modal-dialog__form">
+            <form action="send.php" method="POST" class="form modal-dialog__form">
                 <input type="text" name="name" class="input modal-dialog__input" required placeholder="Имя*">
-                <input type="text" name="phone" data-mask="+7 (000) 000-00-00" class="input modal-dialog__input" required placeholder="Телефон*">
-                <input type="text" name="email" class="modal-dialog__input" required placeholder="E-mail*">
+                <input type="tel" name="phone" data-mask="+7 (000) 000-00-00" class="input modal-dialog__input" required placeholder="Телефон*">
+                <input type="email" name="email" class="modal-dialog__input" required placeholder="E-mail*">
                 <textarea cols="30" rows="5" name="message" class="modal-dialog__textarea" placeholder="Сообщение"></textarea>
                 <button class="button modal-dialog__button" name="button-booking">Отправить</button>
                 <span class="modal-dialog__info">* Обязательное поле</span>
@@ -555,6 +616,9 @@
         </div>
         <!-- /.modal-dialog -->
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

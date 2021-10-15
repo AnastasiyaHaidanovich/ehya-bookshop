@@ -11,7 +11,7 @@ $message = $_POST['message'];
 $email = $_POST['email'];
 
 // Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
+$title = "Новое обращение Ehya Bookstore";
 
 if (isset($_POST['button-booking'])){
     $body = "
@@ -25,13 +25,6 @@ if (isset($_POST['button-booking'])){
     $body = "
     <h2>Новое письмо</h2>
     <b>Почта:</b> $email
-    ";
-} else if (isset($_POST['button-footer'])){
-    $body = "
-    <h2>Новое письмо</h2>
-    <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$message
     ";
 } else{
     $body = "
