@@ -198,7 +198,6 @@ const themeSwiper = new Swiper('.theme-swiper', {
   closeModalButton.on('click', closeModal);
   }
   
-
   function openModal() {
     document.querySelector(".body").classList.add("body-scroll");
     var modalOverlay = $(".modal-overlay");
@@ -206,13 +205,15 @@ const themeSwiper = new Swiper('.theme-swiper', {
     modalOverlay.addClass("modal-overlay__visible");
     modalDialog.addClass("modal-dialog__visible");
 
-    document.body.onkeydown = function(e){
+    if (modalButton) {
+      document.body.onkeydown = function(e){
       e = e || window.event;
       var c = e.keyCode;
       if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
       modalDialog.removeClass("modal-dialog__visible") && 
       document.querySelector(".body").classList.remove("body-scroll");
       }
+    }    
       
       document.addEventListener("click", function (e) {
         const wrap = e.target.classList.contains('modal-overlay__visible');
@@ -242,25 +243,24 @@ const themeSwiper = new Swiper('.theme-swiper', {
       closeModalButtonMenu.on('click', closeModalMenu);
     }
     
-  
     function openModalMenu() {
       var modalOverlay = $(".modal-overlay");
       var modalDialog = $(".modal-dialog");
-      modalOverlay.addClass("modal-overlay__visible");
+      modalOverlay.addClass("modal-overlay__mobile");
       modalDialog.addClass("modal-dialog__visible");
   
       document.body.onkeydown = function(e){
         e = e || window.event;
         var c = e.keyCode;
-        if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
+        if(c === 27) modalOverlay.removeClass("modal-overlay__mobile") && 
         modalDialog.removeClass("modal-dialog__visible");
         }
         
         document.addEventListener("click", function (e) {
-          const wrap = e.target.classList.contains('modal-overlay__visible');
+          const wrap = e.target.classList.contains('modal-overlay__mobile');
           if(!wrap) return;
           e.preventDefault();
-          modalOverlay.removeClass("modal-overlay__visible") && 
+          modalOverlay.removeClass("modal-overlay__mobile") && 
         modalDialog.removeClass("modal-dialog__visible");
       }.bind(this));
     };
@@ -269,7 +269,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       event.preventDefault();
       var modalOverlay = $(".modal-overlay");
       var modalDialog = $(".modal-dialog");
-      modalOverlay.removeClass("modal-overlay__visible");
+      modalOverlay.removeClass("modal-overlay__mobile");
       modalDialog.removeClass("modal-dialog__visible");
     };
 
