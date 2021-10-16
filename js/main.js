@@ -96,6 +96,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       document.querySelector(".body").classList.toggle("body-scroll");
     })
 
+    
     // изменение цвета иконок-сердечек
     var heartToggle = document.querySelector(".recommend-description__heart");
 
@@ -270,6 +271,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       var modalOverlay = $(".modal-overlay");
       var modalDialog = $(".modal-dialog");
       modalOverlay.removeClass("modal-overlay__mobile");
+      modalOverlay.removeClass("modal-overlay__visible");
       modalDialog.removeClass("modal-dialog__visible");
     };
 
