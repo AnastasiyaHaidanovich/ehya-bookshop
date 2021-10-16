@@ -188,50 +188,16 @@ const themeSwiper = new Swiper('.theme-swiper', {
     function videoPlay() {
       player.videoPlay();
     }
-
-    // модалка из меню 
-
-  var modalButtonMenu = $('[data-toggle=menu]');
-  var closeModalButtonMenu = $('.modal-dialog__close');
-  modalButtonMenu.on('click', openModalMenu);
-  closeModalButtonMenu.on('click', closeModalMenu);
-
-  function openModalMenu() {
-    var modalOverlay = $(".modal-overlay");
-    var modalDialog = $(".modal-dialog");
-    modalOverlay.addClass("modal-overlay__visible");
-    modalDialog.addClass("modal-dialog__visible");
-
-    document.body.onkeydown = function(e){
-      e = e || window.event;
-      var c = e.keyCode;
-      if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
-      modalDialog.removeClass("modal-dialog__visible");
-      }
-      
-      document.addEventListener("click", function (e) {
-        const wrap = e.target.classList.contains('modal-overlay__visible');
-        if(!wrap) return;
-        e.preventDefault();
-        modalOverlay.removeClass("modal-overlay__visible") && 
-      modalDialog.removeClass("modal-dialog__visible");
-    }.bind(this));
-  };
-
-  function closeModalMenu(event) {
-    event.preventDefault();
-    var modalOverlay = $(".modal-overlay");
-    var modalDialog = $(".modal-dialog");
-    modalOverlay.removeClass("modal-overlay__visible");
-    modalDialog.removeClass("modal-dialog__visible");
-  };
   
     // подключение модального окна
 
   var modalButton = $('[data-toggle=modal]');
   var closeModalButton = $('.modal-dialog__close');
-  modalButton.on('click', openModal);
+  if (modalButton) {
+    modalButton.on('click', openModal);
   closeModalButton.on('click', closeModal);
+  }
+  
 
   function openModal() {
     document.querySelector(".body").classList.add("body-scroll");
@@ -267,7 +233,46 @@ const themeSwiper = new Swiper('.theme-swiper', {
     document.querySelector(".body").classList.remove("body-scroll");
   };
 
+    // модалка из меню 
+
+    var modalButtonMenu = $('[data-toggle=menu]');
+    var closeModalButtonMenu = $('.modal-dialog__mobile');
+    if (modalButtonMenu) {
+      modalButtonMenu.on('click', openModalMenu);
+      closeModalButtonMenu.on('click', closeModalMenu);
+    }
+    
   
+    function openModalMenu() {
+      var modalOverlay = $(".modal-overlay");
+      var modalDialog = $(".modal-dialog");
+      modalOverlay.addClass("modal-overlay__visible");
+      modalDialog.addClass("modal-dialog__visible");
+  
+      document.body.onkeydown = function(e){
+        e = e || window.event;
+        var c = e.keyCode;
+        if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
+        modalDialog.removeClass("modal-dialog__visible");
+        }
+        
+        document.addEventListener("click", function (e) {
+          const wrap = e.target.classList.contains('modal-overlay__visible');
+          if(!wrap) return;
+          e.preventDefault();
+          modalOverlay.removeClass("modal-overlay__visible") && 
+        modalDialog.removeClass("modal-dialog__visible");
+      }.bind(this));
+    };
+  
+    function closeModalMenu(event) {
+      event.preventDefault();
+      var modalOverlay = $(".modal-overlay");
+      var modalDialog = $(".modal-dialog");
+      modalOverlay.removeClass("modal-overlay__visible");
+      modalDialog.removeClass("modal-dialog__visible");
+    };
+
     // подключение валидации  
 
   $('.form').each(function () {
