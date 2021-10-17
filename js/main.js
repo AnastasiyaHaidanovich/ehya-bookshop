@@ -198,6 +198,18 @@ const themeSwiper = new Swiper('.theme-swiper', {
       player.videoPlay();
     }
   
+
+    // подключение модального окна
+
+  var modalButton = $('[data-toggle=modal]');
+  var closeModalButton = $('.modal-dialog__close');
+  if (modalButton) {
+    modalButton.on('click', openModal);
+  closeModalButton.on('click', closeModal);
+  }
+  
+  function openModal() {
+
 // узнаем ширину скролла 
 
  // создадим элемент с прокруткой
@@ -212,16 +224,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
  let scrollWidth = (div.offsetWidth - div.clientWidth) + "px";
  
  div.remove();
-    // подключение модального окна
 
-  var modalButton = $('[data-toggle=modal]');
-  var closeModalButton = $('.modal-dialog__close');
-  if (modalButton) {
-    modalButton.on('click', openModal);
-  closeModalButton.on('click', closeModal);
-  }
-  
-  function openModal() {
     document.querySelector(".body").classList.add("body-scroll");
     document.querySelector(".body-scroll").style.paddingRight = scrollWidth;
 
@@ -272,6 +275,22 @@ const themeSwiper = new Swiper('.theme-swiper', {
     }
     
     function openModalMenu() {
+
+// узнаем ширину скролла 
+
+ // создадим элемент с прокруткой
+ let div = document.createElement('div');
+
+ div.style.overflowY = 'scroll';
+ div.style.width = '50px';
+ div.style.height = '50px';
+ 
+ // мы должны вставить элемент в документ, иначе размеры будут равны 0
+ document.body.append(div);
+ let scrollWidth = (div.offsetWidth - div.clientWidth) + "px";
+ 
+ div.remove();
+
       var modalOverlay = $(".modal-overlay");
       var modalDialog = $(".modal-dialog");
       modalOverlay.addClass("modal-overlay__mobile");
