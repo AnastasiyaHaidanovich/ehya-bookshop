@@ -249,7 +249,7 @@ menuButton.addEventListener('click', function () {
 
     document.querySelector(".body").classList.add("body-scroll");
     document.querySelector(".body-scroll").style.paddingRight = scrollWidth;
-        
+      
 
     var modalOverlay = $(".modal-overlay");
     var modalDialog = $(".modal-dialog");
@@ -346,8 +346,11 @@ menuButton.addEventListener('click', function () {
       modalOverlay.removeClass("modal-overlay__mobile");
       modalOverlay.removeClass("modal-overlay__visible");
       modalDialog.removeClass("modal-dialog__visible");
-      document.querySelector(".body").classList.remove("body-scroll");
+      if (document.querySelector(".header-mobile__visible")) {}
+      else {
+        document.querySelector(".body").classList.remove("body-scroll");
       document.querySelector(".header").style.paddingRight = 0;
+    }
     };
 
     // подключение валидации  
