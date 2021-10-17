@@ -137,6 +137,14 @@ const themeSwiper = new Swiper('.theme-swiper', {
         $('body,html').animate({scrollTop: top}, 1000);
     });
 
+    // плавная стрелка вверх
+    $("#arrow").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1000);
+  });
+
     // подключаем видео с ютуба
     var player;
     $('.story-wide__button').on('click', function onYouTubeIframeAPIReady() {
