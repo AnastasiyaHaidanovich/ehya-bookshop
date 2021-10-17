@@ -300,6 +300,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       modalOverlay.removeClass("modal-overlay__mobile");
       modalOverlay.removeClass("modal-overlay__visible");
       modalDialog.removeClass("modal-dialog__visible");
+      document.querySelector(".body").classList.remove("body-scroll");
     };
 
     // подключение валидации  
