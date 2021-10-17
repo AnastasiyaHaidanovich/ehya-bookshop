@@ -198,6 +198,20 @@ const themeSwiper = new Swiper('.theme-swiper', {
       player.videoPlay();
     }
   
+// узнаем ширину скролла 
+
+ // создадим элемент с прокруткой
+ let div = document.createElement('div');
+
+ div.style.overflowY = 'scroll';
+ div.style.width = '50px';
+ div.style.height = '50px';
+ 
+ // мы должны вставить элемент в документ, иначе размеры будут равны 0
+ document.body.append(div);
+ let scrollWidth = (div.offsetWidth - div.clientWidth) + "px";
+ 
+ div.remove();
     // подключение модального окна
 
   var modalButton = $('[data-toggle=modal]');
@@ -209,6 +223,8 @@ const themeSwiper = new Swiper('.theme-swiper', {
   
   function openModal() {
     document.querySelector(".body").classList.add("body-scroll");
+    document.querySelector(".body-scroll").style.paddingRight = scrollWidth;
+
     var modalOverlay = $(".modal-overlay");
     var modalDialog = $(".modal-dialog");
     modalOverlay.addClass("modal-overlay__visible");
@@ -221,6 +237,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
       modalDialog.removeClass("modal-dialog__visible") && 
       document.querySelector(".body").classList.remove("body-scroll");
+      document.querySelector(".body").style.paddingRight = 0;
       }
     }    
       
@@ -231,6 +248,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
         modalOverlay.removeClass("modal-overlay__visible") && 
       modalDialog.removeClass("modal-dialog__visible") && 
       document.querySelector(".body").classList.remove("body-scroll");
+      document.querySelector(".body").style.paddingRight = 0;
     }.bind(this));
   };
 
@@ -241,6 +259,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
     modalOverlay.removeClass("modal-overlay__visible");
     modalDialog.removeClass("modal-dialog__visible");
     document.querySelector(".body").classList.remove("body-scroll");
+    document.querySelector(".body").style.paddingRight = 0;
   };
 
     // модалка из меню 
