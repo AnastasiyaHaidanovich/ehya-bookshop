@@ -88,15 +88,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
   
 });
 
-  // открытие мобильного меню
-    var menuButton = document.querySelector(".menu-button")
-
-    menuButton.addEventListener('click', function () {
-      document.querySelector(".header-mobile").classList.toggle("header-mobile__visible");
-      document.querySelector(".body").classList.toggle("body-scroll");
-    })
-
-    
+  
     // изменение цвета иконок-сердечек
     var heartToggle = document.querySelector(".recommend-description__heart");
 
@@ -198,6 +190,36 @@ const themeSwiper = new Swiper('.theme-swiper', {
       player.videoPlay();
     }
   
+// открытие мобильного меню
+var menuButton = document.querySelector(".menu-button")
+
+menuButton.addEventListener('click', function () {
+  document.querySelector(".header-mobile").classList.toggle("header-mobile__visible");
+ // узнаем ширину скролла 
+
+ // создадим элемент с прокруткой
+ let div = document.createElement('div');
+
+ div.style.overflowY = 'scroll';
+ div.style.width = '50px';
+ div.style.height = '50px';
+ 
+ // мы должны вставить элемент в документ, иначе размеры будут равны 0
+ document.body.append(div);
+ let scrollWidth = (div.offsetWidth - div.clientWidth) + "px";
+ 
+ div.remove();
+
+  
+  document.querySelector(".body").classList.toggle("body-scroll");
+
+  if (document.querySelector(".body-scroll")) {
+    document.querySelector(".header").style.paddingRight = scrollWidth;
+  } else {
+    document.querySelector(".header").style.paddingRight = 0;
+  }
+})
+
 
     // подключение модального окна
 
@@ -227,6 +249,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
 
     document.querySelector(".body").classList.add("body-scroll");
     document.querySelector(".body-scroll").style.paddingRight = scrollWidth;
+        
 
     var modalOverlay = $(".modal-overlay");
     var modalDialog = $(".modal-dialog");
@@ -241,6 +264,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       modalDialog.removeClass("modal-dialog__visible") && 
       document.querySelector(".body").classList.remove("body-scroll");
       document.querySelector(".body").style.paddingRight = 0;
+      document.querySelector(".header").style.paddingRight = 0;
       }
     }    
       
@@ -252,6 +276,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       modalDialog.removeClass("modal-dialog__visible") && 
       document.querySelector(".body").classList.remove("body-scroll");
       document.querySelector(".body").style.paddingRight = 0;
+      document.querySelector(".header").style.paddingRight = 0;
     }.bind(this));
   };
 
@@ -263,6 +288,8 @@ const themeSwiper = new Swiper('.theme-swiper', {
     modalDialog.removeClass("modal-dialog__visible");
     document.querySelector(".body").classList.remove("body-scroll");
     document.querySelector(".body").style.paddingRight = 0;
+
+    document.querySelector(".header").style.paddingRight = 0;
   };
 
     // модалка из меню 
@@ -320,6 +347,7 @@ const themeSwiper = new Swiper('.theme-swiper', {
       modalOverlay.removeClass("modal-overlay__visible");
       modalDialog.removeClass("modal-dialog__visible");
       document.querySelector(".body").classList.remove("body-scroll");
+      document.querySelector(".header").style.paddingRight = 0;
     };
 
     // подключение валидации  
