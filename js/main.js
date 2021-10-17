@@ -278,6 +278,7 @@ menuButton.addEventListener('click', function () {
       document.querySelector(".body").classList.remove("body-scroll");
       document.querySelector(".body").style.paddingRight = 0;
       document.querySelector(".header").style.paddingRight = 0;
+      document.querySelector(".header__menu-button").style.paddingRight = 0;
     }.bind(this));
   };
 
@@ -289,7 +290,6 @@ menuButton.addEventListener('click', function () {
     modalDialog.removeClass("modal-dialog__visible");
     document.querySelector(".body").classList.remove("body-scroll");
     document.querySelector(".body").style.paddingRight = 0;
-
     document.querySelector(".header").style.paddingRight = 0;
   };
 
@@ -347,6 +347,8 @@ menuButton.addEventListener('click', function () {
       modalOverlay.removeClass("modal-overlay__mobile");
       modalOverlay.removeClass("modal-overlay__visible");
       modalDialog.removeClass("modal-dialog__visible");
+      
+    document.querySelector(".header__menu-button").style.paddingRight = 0;
       if (document.querySelector(".header-mobile__visible")) {}
       else {
         document.querySelector(".body").classList.remove("body-scroll");
