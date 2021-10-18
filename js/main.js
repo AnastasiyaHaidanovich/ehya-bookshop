@@ -250,6 +250,7 @@ menuButton.addEventListener('click', function () {
     document.querySelector(".body").classList.add("body-scroll");
     document.querySelector(".body-scroll").style.paddingRight = scrollWidth;
     document.querySelector(".header__menu-button").style.paddingRight = scrollWidth;
+    document.querySelector(".to-top").style.marginRight = scrollWidth;
 
     var modalOverlay = $(".modal-overlay");
     var modalDialog = $(".modal-dialog");
@@ -266,6 +267,7 @@ menuButton.addEventListener('click', function () {
       document.querySelector(".body").style.paddingRight = 0;
       document.querySelector(".header").style.paddingRight = 0;
       document.querySelector(".header__menu-button").style.paddingRight = 0;
+      document.querySelector(".to-top").style.marginRight = 0;
       }
     }    
       
@@ -279,6 +281,7 @@ menuButton.addEventListener('click', function () {
       document.querySelector(".body").style.paddingRight = 0;
       document.querySelector(".header").style.paddingRight = 0;
       document.querySelector(".header__menu-button").style.paddingRight = 0;
+      document.querySelector(".to-top").style.marginRight = 0;
     }.bind(this));
   };
 
@@ -291,6 +294,7 @@ menuButton.addEventListener('click', function () {
     document.querySelector(".body").classList.remove("body-scroll");
     document.querySelector(".body").style.paddingRight = 0;
     document.querySelector(".header").style.paddingRight = 0;
+    document.querySelector(".to-top").style.marginRight = 0;
   };
 
     // модалка из меню 
