@@ -351,6 +351,7 @@ menuButton.addEventListener('click', function () {
       modalOverlay.removeClass("modal-overlay__mobile");
       modalOverlay.removeClass("modal-overlay__visible");
       modalDialog.removeClass("modal-dialog__visible");
+      document.querySelector(".to-top").style.marginRight = 0;
       
     document.querySelector(".header__menu-button").style.paddingRight = 0;
       if (document.querySelector(".header-mobile__visible")) {}
